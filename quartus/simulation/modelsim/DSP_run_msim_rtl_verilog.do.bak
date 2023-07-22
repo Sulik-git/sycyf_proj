@@ -1,0 +1,13 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+E:/REPO/SYCYF/quartus {E:/REPO/SYCYF/quartus/DSP.v}
+vlog -vlog01compat -work work +incdir+E:/REPO/SYCYF/quartus {E:/REPO/SYCYF/quartus/RAM.v}
+vlog -vlog01compat -work work +incdir+E:/REPO/SYCYF/quartus {E:/REPO/SYCYF/quartus/MULTIPLIER.v}
+vlog -vlog01compat -work work +incdir+E:/REPO/SYCYF/quartus {E:/REPO/SYCYF/quartus/ADDER.v}
+vlog -vlog01compat -work work +incdir+E:/REPO/SYCYF/quartus {E:/REPO/SYCYF/quartus/SOLVER.v}
+

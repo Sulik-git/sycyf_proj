@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at MULTIPLIER.v(21): always construct contains both blocking and non-blocking assignments File: D:/REPO/SYF_PROJ/quartus/MULTIPLIER.v Line: 21
+Warning (10268): Verilog HDL information at rom.v(39): always construct contains both blocking and non-blocking assignments File: D:/REPO/SYF_PROJ/quartus/rom.v Line: 39

@@ -1,0 +1,148 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/REPO/SYF_PROJ/quartus/simulation/modelsim
+vADDER
+Z1 !s110 1679517964
+!i10b 1
+!s100 O4`Wg_cn5zL_6Y0gBjEm:0
+IM8kObnjccSmhjHJdXb`NE1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1655228775
+8D:/REPO/SYF_PROJ/quartus/ADDER.v
+FD:/REPO/SYF_PROJ/quartus/ADDER.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1679517964.000000
+!s107 D:/REPO/SYF_PROJ/quartus/ADDER.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/REPO/SYF_PROJ/quartus|D:/REPO/SYF_PROJ/quartus/ADDER.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+D:/REPO/SYF_PROJ/quartus
+Z7 tCvgOpt 0
+n@a@d@d@e@r
+vDSP
+R1
+!i10b 1
+!s100 d@7;OZ?P>f@zN<^^<Z:Mb2
+IO;::fEN8AZ1Pe2`3`aIHU1
+R2
+R0
+w1679515796
+8D:/REPO/SYF_PROJ/quartus/DSP.v
+FD:/REPO/SYF_PROJ/quartus/DSP.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/REPO/SYF_PROJ/quartus/DSP.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/REPO/SYF_PROJ/quartus|D:/REPO/SYF_PROJ/quartus/DSP.v|
+!i113 1
+R5
+R6
+R7
+n@d@s@p
+vDSP_tb
+R1
+!i10b 1
+!s100 Hc^D_WD4<l2kHoZcE5lVo2
+IIC]Ca5Ggn5kFZ4oY?D6zi0
+R2
+R0
+w1679514716
+8D:/REPO/SYF_PROJ/quartus/DSP_tb.v
+FD:/REPO/SYF_PROJ/quartus/DSP_tb.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/REPO/SYF_PROJ/quartus/DSP_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/REPO/SYF_PROJ/quartus|D:/REPO/SYF_PROJ/quartus/DSP_tb.v|
+!i113 1
+R5
+R6
+R7
+n@d@s@p_tb
+vMULTIPLIER
+R1
+!i10b 1
+!s100 `RbSz?0_gF8hXW[FAl`zz2
+IjcJk[lKhFDSB6DO80zPEX2
+R2
+R0
+w1654877768
+8D:/REPO/SYF_PROJ/quartus/MULTIPLIER.v
+FD:/REPO/SYF_PROJ/quartus/MULTIPLIER.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/REPO/SYF_PROJ/quartus/MULTIPLIER.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/REPO/SYF_PROJ/quartus|D:/REPO/SYF_PROJ/quartus/MULTIPLIER.v|
+!i113 1
+R5
+R6
+R7
+n@m@u@l@t@i@p@l@i@e@r
+vROM
+R1
+!i10b 1
+!s100 DNdfXnlJkS:<LWZoSlJ;Y0
+I=8U^oLhPYI:@OM5ClUEXG3
+R2
+R0
+w1679517744
+8D:/REPO/SYF_PROJ/quartus/rom.v
+FD:/REPO/SYF_PROJ/quartus/rom.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/REPO/SYF_PROJ/quartus/rom.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/REPO/SYF_PROJ/quartus|D:/REPO/SYF_PROJ/quartus/rom.v|
+!i113 1
+R5
+R6
+R7
+n@r@o@m
+vSOLVER
+R1
+!i10b 1
+!s100 nPdQ3a94Wh>VH7Lj:`0M62
+I7DH=bKQ[=8KPHYEozSflS0
+R2
+R0
+w1655228871
+8D:/REPO/SYF_PROJ/quartus/SOLVER.v
+FD:/REPO/SYF_PROJ/quartus/SOLVER.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/REPO/SYF_PROJ/quartus/SOLVER.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/REPO/SYF_PROJ/quartus|D:/REPO/SYF_PROJ/quartus/SOLVER.v|
+!i113 1
+R5
+R6
+R7
+n@s@o@l@v@e@r

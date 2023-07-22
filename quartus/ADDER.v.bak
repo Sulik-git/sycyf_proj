@@ -1,0 +1,10 @@
+module ADDER(
+
+
+	input [15:0]data,
+	output [18:0] sum
+
+
+
+
+);

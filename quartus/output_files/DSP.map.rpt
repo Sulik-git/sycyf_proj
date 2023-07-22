@@ -1,0 +1,478 @@
+Analysis & Synthesis report for DSP
+Wed Mar 22 21:45:01 2023
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: ROM:dsp_rom
+ 12. Parameter Settings for User Entity Instance: ADDER:dsp_adder
+ 13. Parameter Settings for User Entity Instance: SOLVER:dsp_solver
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+ 17. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Mar 22 21:45:01 2023       ;
+; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Revision Name                      ; DSP                                         ;
+; Top-level Entity Name              ; DSP                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 15                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; DSP                ; DSP                ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Type of Retiming Performed During Resynthesis                    ; Full               ;                    ;
+; Resynthesis Optimization Effort                                  ; Normal             ;                    ;
+; Physical Synthesis Level for Resynthesis                         ; Normal             ;                    ;
+; Use Generated Physical Constraints File                          ; On                 ;                    ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                              ;
++----------------------------------+-----------------+------------------------------+---------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path          ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------+---------+
+; DSP.v                            ; yes             ; User Verilog HDL File        ; D:/REPO/SYF_PROJ/quartus/DSP.v        ;         ;
+; MULTIPLIER.v                     ; yes             ; User Verilog HDL File        ; D:/REPO/SYF_PROJ/quartus/MULTIPLIER.v ;         ;
+; ADDER.v                          ; yes             ; User Verilog HDL File        ; D:/REPO/SYF_PROJ/quartus/ADDER.v      ;         ;
+; SOLVER.v                         ; yes             ; User Verilog HDL File        ; D:/REPO/SYF_PROJ/quartus/SOLVER.v     ;         ;
+; rom.v                            ; yes             ; Auto-Found Verilog HDL File  ; D:/REPO/SYF_PROJ/quartus/rom.v        ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 15    ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 15    ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; |DSP                       ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |DSP                ; DSP         ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                ;
++------------------------------------------+----------------------------------------+
+; Register name                            ; Reason for Removal                     ;
++------------------------------------------+----------------------------------------+
+; ROM:dsp_rom|q_b[0..7]                    ; Stuck at GND due to stuck port data_in ;
+; ROM:dsp_rom|q_a[0..7]                    ; Stuck at GND due to stuck port data_in ;
+; MULTIPLIER:dsp_multiplier|product[0..15] ; Stuck at GND due to stuck port data_in ;
+; ADDER:dsp_adder|part[0..20]              ; Stuck at GND due to stuck port data_in ;
+; ADDER:dsp_adder|sum[1..20]               ; Stuck at GND due to stuck port data_in ;
+; SOLVER:dsp_solver|saved[1..20]           ; Stuck at GND due to stuck port data_in ;
+; ADDER:dsp_adder|sum[0]                   ; Stuck at GND due to stuck port data_in ;
+; SOLVER:dsp_solver|saved[0]               ; Stuck at GND due to stuck port data_in ;
+; SOLVER:dsp_solver|saved_cnt[0..11]       ; Stuck at GND due to stuck port data_in ;
+; SOLVER:dsp_solver|solved[0..11]          ; Stuck at GND due to stuck port data_in ;
+; SOLVER:dsp_solver|cnt[0..31]             ; Lost fanout                            ;
+; ADDER:dsp_adder|cntA[0..31]              ; Lost fanout                            ;
+; ADDER:dsp_adder|cntB[0..31]              ; Lost fanout                            ;
+; ADDER:dsp_adder|next_add                 ; Lost fanout                            ;
+; ADDER:dsp_adder|ena_out                  ; Lost fanout                            ;
+; MULTIPLIER:dsp_multiplier|ena_out        ; Lost fanout                            ;
+; ROM:dsp_rom|ena_out                      ; Lost fanout                            ;
+; ROM:dsp_rom|local_ena                    ; Lost fanout                            ;
+; ROM:dsp_rom|rdy                          ; Lost fanout                            ;
+; ROM:dsp_rom|c[0..31]                     ; Lost fanout                            ;
+; ROM:dsp_rom|i[0..31]                     ; Lost fanout                            ;
+; Total Number of Removed Registers = 285  ;                                        ;
++------------------------------------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                 ;
++--------------------------+---------------------------+--------------------------------------------------------------------------------------+
+; Register name            ; Reason for Removal        ; Registers Removed due to This Register                                               ;
++--------------------------+---------------------------+--------------------------------------------------------------------------------------+
+; ROM:dsp_rom|q_b[5]       ; Stuck at GND              ; MULTIPLIER:dsp_multiplier|product[9], MULTIPLIER:dsp_multiplier|product[8],          ;
+;                          ; due to stuck port data_in ; MULTIPLIER:dsp_multiplier|product[7], MULTIPLIER:dsp_multiplier|product[10],         ;
+;                          ;                           ; MULTIPLIER:dsp_multiplier|product[11], MULTIPLIER:dsp_multiplier|product[12],        ;
+;                          ;                           ; MULTIPLIER:dsp_multiplier|product[13], MULTIPLIER:dsp_multiplier|product[14],        ;
+;                          ;                           ; MULTIPLIER:dsp_multiplier|product[15], ADDER:dsp_adder|part[20],                     ;
+;                          ;                           ; ADDER:dsp_adder|part[19], ADDER:dsp_adder|part[18], ADDER:dsp_adder|part[17],        ;
+;                          ;                           ; ADDER:dsp_adder|part[16], ADDER:dsp_adder|part[15], ADDER:dsp_adder|part[14],        ;
+;                          ;                           ; ADDER:dsp_adder|part[13], ADDER:dsp_adder|sum[20], ADDER:dsp_adder|sum[19],          ;
+;                          ;                           ; ADDER:dsp_adder|sum[18], ADDER:dsp_adder|sum[17], ADDER:dsp_adder|sum[16],           ;
+;                          ;                           ; ADDER:dsp_adder|sum[15], ADDER:dsp_adder|sum[14], ADDER:dsp_adder|sum[13],           ;
+;                          ;                           ; ADDER:dsp_adder|sum[12], SOLVER:dsp_solver|saved[20], SOLVER:dsp_solver|saved[19],   ;
+;                          ;                           ; SOLVER:dsp_solver|saved[18], SOLVER:dsp_solver|saved[17],                            ;
+;                          ;                           ; SOLVER:dsp_solver|saved[16], SOLVER:dsp_solver|saved[15],                            ;
+;                          ;                           ; SOLVER:dsp_solver|saved[14], SOLVER:dsp_solver|saved[13],                            ;
+;                          ;                           ; SOLVER:dsp_solver|saved[12], SOLVER:dsp_solver|saved[11],                            ;
+;                          ;                           ; SOLVER:dsp_solver|saved[10], SOLVER:dsp_solver|saved[9], SOLVER:dsp_solver|saved[8], ;
+;                          ;                           ; SOLVER:dsp_solver|saved[7], SOLVER:dsp_solver|saved[6], SOLVER:dsp_solver|saved[5],  ;
+;                          ;                           ; SOLVER:dsp_solver|saved[4], SOLVER:dsp_solver|saved[3], SOLVER:dsp_solver|saved[2],  ;
+;                          ;                           ; SOLVER:dsp_solver|saved[1], SOLVER:dsp_solver|saved[0],                              ;
+;                          ;                           ; SOLVER:dsp_solver|saved_cnt[11], SOLVER:dsp_solver|saved_cnt[10],                    ;
+;                          ;                           ; SOLVER:dsp_solver|saved_cnt[9], SOLVER:dsp_solver|saved_cnt[8],                      ;
+;                          ;                           ; SOLVER:dsp_solver|saved_cnt[7], SOLVER:dsp_solver|saved_cnt[6],                      ;
+;                          ;                           ; SOLVER:dsp_solver|saved_cnt[5], SOLVER:dsp_solver|saved_cnt[4],                      ;
+;                          ;                           ; SOLVER:dsp_solver|saved_cnt[3], SOLVER:dsp_solver|saved_cnt[2],                      ;
+;                          ;                           ; SOLVER:dsp_solver|saved_cnt[1], SOLVER:dsp_solver|saved_cnt[0],                      ;
+;                          ;                           ; SOLVER:dsp_solver|solved[11], SOLVER:dsp_solver|solved[10],                          ;
+;                          ;                           ; SOLVER:dsp_solver|solved[9], SOLVER:dsp_solver|solved[8],                            ;
+;                          ;                           ; SOLVER:dsp_solver|solved[7], SOLVER:dsp_solver|solved[6],                            ;
+;                          ;                           ; SOLVER:dsp_solver|solved[5], SOLVER:dsp_solver|solved[4],                            ;
+;                          ;                           ; SOLVER:dsp_solver|solved[3], SOLVER:dsp_solver|solved[2],                            ;
+;                          ;                           ; SOLVER:dsp_solver|solved[1], SOLVER:dsp_solver|solved[0], SOLVER:dsp_solver|cnt[31], ;
+;                          ;                           ; SOLVER:dsp_solver|cnt[30], SOLVER:dsp_solver|cnt[29], SOLVER:dsp_solver|cnt[28],     ;
+;                          ;                           ; SOLVER:dsp_solver|cnt[27], SOLVER:dsp_solver|cnt[11], SOLVER:dsp_solver|cnt[10],     ;
+;                          ;                           ; SOLVER:dsp_solver|cnt[9], SOLVER:dsp_solver|cnt[8], SOLVER:dsp_solver|cnt[7],        ;
+;                          ;                           ; SOLVER:dsp_solver|cnt[6], SOLVER:dsp_solver|cnt[5], SOLVER:dsp_solver|cnt[4],        ;
+;                          ;                           ; SOLVER:dsp_solver|cnt[3], SOLVER:dsp_solver|cnt[2], SOLVER:dsp_solver|cnt[1],        ;
+;                          ;                           ; SOLVER:dsp_solver|cnt[0], ADDER:dsp_adder|cntA[31], ADDER:dsp_adder|cntA[30],        ;
+;                          ;                           ; ADDER:dsp_adder|cntA[4], ADDER:dsp_adder|cntA[3], ADDER:dsp_adder|cntA[2],           ;
+;                          ;                           ; ADDER:dsp_adder|cntA[1], ADDER:dsp_adder|cntA[0], ADDER:dsp_adder|cntB[31],          ;
+;                          ;                           ; ADDER:dsp_adder|cntB[30], ADDER:dsp_adder|cntB[29], ADDER:dsp_adder|cntB[5],         ;
+;                          ;                           ; ADDER:dsp_adder|cntB[4], ADDER:dsp_adder|cntB[3], ADDER:dsp_adder|cntB[2],           ;
+;                          ;                           ; ADDER:dsp_adder|cntB[1], ADDER:dsp_adder|cntB[0], ADDER:dsp_adder|next_add,          ;
+;                          ;                           ; ADDER:dsp_adder|ena_out, MULTIPLIER:dsp_multiplier|ena_out, ROM:dsp_rom|ena_out,     ;
+;                          ;                           ; ROM:dsp_rom|local_ena, ROM:dsp_rom|rdy                                               ;
+; ADDER:dsp_adder|part[11] ; Stuck at GND              ; ADDER:dsp_adder|sum[11]                                                              ;
+;                          ; due to stuck port data_in ;                                                                                      ;
+; ADDER:dsp_adder|part[10] ; Stuck at GND              ; ADDER:dsp_adder|sum[10]                                                              ;
+;                          ; due to stuck port data_in ;                                                                                      ;
+; ADDER:dsp_adder|part[9]  ; Stuck at GND              ; ADDER:dsp_adder|sum[9]                                                               ;
+;                          ; due to stuck port data_in ;                                                                                      ;
+; ADDER:dsp_adder|part[8]  ; Stuck at GND              ; ADDER:dsp_adder|sum[8]                                                               ;
+;                          ; due to stuck port data_in ;                                                                                      ;
+; ADDER:dsp_adder|part[7]  ; Stuck at GND              ; ADDER:dsp_adder|sum[7]                                                               ;
+;                          ; due to stuck port data_in ;                                                                                      ;
+; ADDER:dsp_adder|part[6]  ; Stuck at GND              ; ADDER:dsp_adder|sum[6]                                                               ;
+;                          ; due to stuck port data_in ;                                                                                      ;
+; ADDER:dsp_adder|part[5]  ; Stuck at GND              ; ADDER:dsp_adder|sum[5]                                                               ;
+;                          ; due to stuck port data_in ;                                                                                      ;
+; ADDER:dsp_adder|part[4]  ; Stuck at GND              ; ADDER:dsp_adder|sum[4]                                                               ;
+;                          ; due to stuck port data_in ;                                                                                      ;
+; ADDER:dsp_adder|part[3]  ; Stuck at GND              ; ADDER:dsp_adder|sum[3]                                                               ;
+;                          ; due to stuck port data_in ;                                                                                      ;
+; ADDER:dsp_adder|part[2]  ; Stuck at GND              ; ADDER:dsp_adder|sum[2]                                                               ;
+;                          ; due to stuck port data_in ;                                                                                      ;
+; ADDER:dsp_adder|part[1]  ; Stuck at GND              ; ADDER:dsp_adder|sum[1]                                                               ;
+;                          ; due to stuck port data_in ;                                                                                      ;
+; ADDER:dsp_adder|part[0]  ; Stuck at GND              ; ADDER:dsp_adder|sum[0]                                                               ;
+;                          ; due to stuck port data_in ;                                                                                      ;
++--------------------------+---------------------------+--------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ROM:dsp_rom ;
++-----------------+-------+--------------------------------+
+; Parameter Name  ; Value ; Type                           ;
++-----------------+-------+--------------------------------+
+; signalA_samples ; 20    ; Signed Integer                 ;
+; corr_samples    ; 5000  ; Signed Integer                 ;
+; signalB_samples ; 5000  ; Signed Integer                 ;
++-----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ADDER:dsp_adder ;
++-----------------+-------+------------------------------------+
+; Parameter Name  ; Value ; Type                               ;
++-----------------+-------+------------------------------------+
+; signalA_samples ; 20    ; Signed Integer                     ;
+; signalB_samples ; 5000  ; Signed Integer                     ;
++-----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SOLVER:dsp_solver ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; corr           ; 4980  ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 15                          ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+    Info: Processing started: Wed Mar 22 21:44:49 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DSP -c DSP
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file dsp.v
+    Info (12023): Found entity 1: DSP File: D:/REPO/SYF_PROJ/quartus/DSP.v Line: 2
+Warning (12019): Can't analyze file -- file RAM.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file multiplier.v
+    Info (12023): Found entity 1: MULTIPLIER File: D:/REPO/SYF_PROJ/quartus/MULTIPLIER.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file adder.v
+    Info (12023): Found entity 1: ADDER File: D:/REPO/SYF_PROJ/quartus/ADDER.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file solver.v
+    Info (12023): Found entity 1: SOLVER File: D:/REPO/SYF_PROJ/quartus/SOLVER.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file stream_divider.v
+    Info (12023): Found entity 1: STREAM_DIVIDER File: D:/REPO/SYF_PROJ/quartus/STREAM_DIVIDER.v Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file dsp_tb.v
+Info (12127): Elaborating entity "DSP" for the top level hierarchy
+Warning (12125): Using design file rom.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ROM File: D:/REPO/SYF_PROJ/quartus/rom.v Line: 1
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:dsp_rom" File: D:/REPO/SYF_PROJ/quartus/DSP.v Line: 29
+Warning (10858): Verilog HDL warning at rom.v(30): object memory_a used but never assigned File: D:/REPO/SYF_PROJ/quartus/rom.v Line: 30
+Warning (10858): Verilog HDL warning at rom.v(31): object memory_b used but never assigned File: D:/REPO/SYF_PROJ/quartus/rom.v Line: 31
+Info (12128): Elaborating entity "MULTIPLIER" for hierarchy "MULTIPLIER:dsp_multiplier" File: D:/REPO/SYF_PROJ/quartus/DSP.v Line: 39
+Warning (10036): Verilog HDL or VHDL warning at MULTIPLIER.v(16): object "prod" assigned a value but never read File: D:/REPO/SYF_PROJ/quartus/MULTIPLIER.v Line: 16
+Warning (10036): Verilog HDL or VHDL warning at MULTIPLIER.v(19): object "c" assigned a value but never read File: D:/REPO/SYF_PROJ/quartus/MULTIPLIER.v Line: 19
+Info (12128): Elaborating entity "ADDER" for hierarchy "ADDER:dsp_adder" File: D:/REPO/SYF_PROJ/quartus/DSP.v Line: 49
+Info (12128): Elaborating entity "SOLVER" for hierarchy "SOLVER:dsp_solver" File: D:/REPO/SYF_PROJ/quartus/DSP.v Line: 57
+Warning (10036): Verilog HDL or VHDL warning at SOLVER.v(16): object "solved_local" assigned a value but never read File: D:/REPO/SYF_PROJ/quartus/SOLVER.v Line: 16
+Warning (10230): Verilog HDL assignment warning at SOLVER.v(43): truncated value with size 32 to match size of target (12) File: D:/REPO/SYF_PROJ/quartus/SOLVER.v Line: 43
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "solved_dsp[0]" is stuck at GND File: D:/REPO/SYF_PROJ/quartus/DSP.v Line: 10
+    Warning (13410): Pin "solved_dsp[1]" is stuck at GND File: D:/REPO/SYF_PROJ/quartus/DSP.v Line: 10
+    Warning (13410): Pin "solved_dsp[2]" is stuck at GND File: D:/REPO/SYF_PROJ/quartus/DSP.v Line: 10
+    Warning (13410): Pin "solved_dsp[3]" is stuck at GND File: D:/REPO/SYF_PROJ/quartus/DSP.v Line: 10
+    Warning (13410): Pin "solved_dsp[4]" is stuck at GND File: D:/REPO/SYF_PROJ/quartus/DSP.v Line: 10
+    Warning (13410): Pin "solved_dsp[5]" is stuck at GND File: D:/REPO/SYF_PROJ/quartus/DSP.v Line: 10
+    Warning (13410): Pin "solved_dsp[6]" is stuck at GND File: D:/REPO/SYF_PROJ/quartus/DSP.v Line: 10
+    Warning (13410): Pin "solved_dsp[7]" is stuck at GND File: D:/REPO/SYF_PROJ/quartus/DSP.v Line: 10
+    Warning (13410): Pin "solved_dsp[8]" is stuck at GND File: D:/REPO/SYF_PROJ/quartus/DSP.v Line: 10
+    Warning (13410): Pin "solved_dsp[9]" is stuck at GND File: D:/REPO/SYF_PROJ/quartus/DSP.v Line: 10
+    Warning (13410): Pin "solved_dsp[10]" is stuck at GND File: D:/REPO/SYF_PROJ/quartus/DSP.v Line: 10
+    Warning (13410): Pin "solved_dsp[11]" is stuck at GND File: D:/REPO/SYF_PROJ/quartus/DSP.v Line: 10
+Info (17049): 166 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file D:/REPO/SYF_PROJ/quartus/output_files/DSP.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk" File: D:/REPO/SYF_PROJ/quartus/DSP.v Line: 5
+    Warning (15610): No output dependent on input pin "rst" File: D:/REPO/SYF_PROJ/quartus/DSP.v Line: 6
+    Warning (15610): No output dependent on input pin "ena" File: D:/REPO/SYF_PROJ/quartus/DSP.v Line: 7
+Info (21057): Implemented 15 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 12 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
+    Info: Peak virtual memory: 4735 megabytes
+    Info: Processing ended: Wed Mar 22 21:45:01 2023
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:21
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/REPO/SYF_PROJ/quartus/output_files/DSP.map.smsg.
+
+

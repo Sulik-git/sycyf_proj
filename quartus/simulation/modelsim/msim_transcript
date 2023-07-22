@@ -1,0 +1,100 @@
+# Reading D:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# do DSP_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying D:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/REPO/SYF_PROJ/quartus {D:/REPO/SYF_PROJ/quartus/DSP.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:46:04 on Mar 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/REPO/SYF_PROJ/quartus" D:/REPO/SYF_PROJ/quartus/DSP.v 
+# -- Compiling module DSP
+# 
+# Top level modules:
+# 	DSP
+# End time: 21:46:04 on Mar 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/REPO/SYF_PROJ/quartus {D:/REPO/SYF_PROJ/quartus/MULTIPLIER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:46:04 on Mar 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/REPO/SYF_PROJ/quartus" D:/REPO/SYF_PROJ/quartus/MULTIPLIER.v 
+# -- Compiling module MULTIPLIER
+# 
+# Top level modules:
+# 	MULTIPLIER
+# End time: 21:46:04 on Mar 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/REPO/SYF_PROJ/quartus {D:/REPO/SYF_PROJ/quartus/ADDER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:46:04 on Mar 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/REPO/SYF_PROJ/quartus" D:/REPO/SYF_PROJ/quartus/ADDER.v 
+# -- Compiling module ADDER
+# 
+# Top level modules:
+# 	ADDER
+# End time: 21:46:04 on Mar 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/REPO/SYF_PROJ/quartus {D:/REPO/SYF_PROJ/quartus/SOLVER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:46:04 on Mar 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/REPO/SYF_PROJ/quartus" D:/REPO/SYF_PROJ/quartus/SOLVER.v 
+# -- Compiling module SOLVER
+# 
+# Top level modules:
+# 	SOLVER
+# End time: 21:46:04 on Mar 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/REPO/SYF_PROJ/quartus {D:/REPO/SYF_PROJ/quartus/rom.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:46:04 on Mar 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/REPO/SYF_PROJ/quartus" D:/REPO/SYF_PROJ/quartus/rom.v 
+# -- Compiling module ROM
+# 
+# Top level modules:
+# 	ROM
+# End time: 21:46:04 on Mar 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/REPO/SYF_PROJ/quartus {D:/REPO/SYF_PROJ/quartus/DSP_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:46:04 on Mar 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/REPO/SYF_PROJ/quartus" D:/REPO/SYF_PROJ/quartus/DSP_tb.v 
+# -- Compiling module DSP_tb
+# 
+# Top level modules:
+# 	DSP_tb
+# End time: 21:46:04 on Mar 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  DSP_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" DSP_tb 
+# Start time: 21:46:04 on Mar 22,2023
+# Loading work.DSP_tb
+# Loading work.DSP
+# Loading work.ROM
+# Loading work.MULTIPLIER
+# Loading work.ADDER
+# Loading work.SOLVER
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: (vsim-7) Failed to open readmem file "SignalSBin.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : D:/REPO/SYF_PROJ/quartus/rom.v(23)
+#    Time: 0 ps  Iteration: 0  Instance: /DSP_tb/UUT/dsp_rom
+# ** Warning: (vsim-7) Failed to open readmem file "SignalBBin.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : D:/REPO/SYF_PROJ/quartus/rom.v(24)
+#    Time: 0 ps  Iteration: 0  Instance: /DSP_tb/UUT/dsp_rom
+# Break key hit
+# Simulation stop requested.
+# End time: 21:46:17 on Mar 22,2023, Elapsed time: 0:00:13
+# Errors: 0, Warnings: 2
